@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salesforce DCF Dashboard - Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #F8F9FA;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .metric-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #3b82f6;
+        }
+        .metric-label {
+            font-size: 11px;
+            color: #6b7280;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .metric-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+        .metric-badge {
+            display: inline-block;
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background: #d1fae5;
+            color: #065f46;
+        }
+        .success {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 style="margin: 0;">📊 Salesforce DCF Valuation</h1>
+        <p style="margin: 5px 0 0 0; opacity: 0.8;">by Priya Rastogi</p>
+    </div>
+    
+    <div class="success">
+        ✅ Dashboard Data Loading Successfully!
+    </div>
+    
+    <div class="metrics">
+        <div class="metric-card">
+            <div class="metric-label">FY2031 Revenue</div>
+            <div class="metric-value">$64.2B</div>
+            <span class="metric-badge">+8.9% CAGR</span>
+        </div>
+        
+        <div class="metric-card" style="border-left-color: #10b981;">
+            <div class="metric-label">Intrinsic Value</div>
+            <div class="metric-value">$275</div>
+            <span class="metric-badge">Per Share</span>
+        </div>
+        
+        <div class="metric-card" style="border-left-color: #f59e0b;">
+            <div class="metric-label">Market Price</div>
+            <div class="metric-value">$166</div>
+            <span class="metric-badge">Current</span>
+        </div>
+        
+        <div class="metric-card" style="border-left-color: #059669;">
+            <div class="metric-label">Upside/Downside</div>
+            <div class="metric-value">+66.1%</div>
+            <span class="metric-badge">To DCF Value</span>
+        </div>
+        
+        <div class="metric-card" style="border-left-color: #8b5cf6;">
+            <div class="metric-label">Net Margin</div>
+            <div class="metric-value">17.2%</div>
+            <span class="metric-badge">FY2031</span>
+        </div>
+        
+        <div class="metric-card" style="border-left-color: #ef4444;">
+            <div class="metric-label">WACC</div>
+            <div class="metric-value">9.6%</div>
+            <span class="metric-badge">Discount Rate</span>
+        </div>
+    </div>
+    
+    <div style="background: white; padding: 20px; border-radius: 10px; text-align: center;">
+        <h2>Interactive Charts Available in Full Dashboard</h2>
+        <p style="color: #6b7280;">
+            Access the full interactive dashboard at: 
+            <strong style="color: #3b82f6;">http://localhost:8501</strong>
+        </p>
+        <ul style="text-align: left; max-width: 500px; margin: 20px auto; color: #374151;">
+            <li>Revenue Growth Bar Chart</li>
+            <li>Profitability Margins Line Chart</li>
+            <li>Valuation Comparison Chart</li>
+            <li>Cash & Equivalents Trend</li>
+            <li>Key Assumptions Display</li>
+        </ul>
+    </div>
+</body>
+</html>
