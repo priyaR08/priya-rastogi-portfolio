@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Salesforce DCF Valuation - Priya Rastogi</title>
-    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -154,12 +153,110 @@
     <div class="chart-section">
         <div class="chart-box">
             <div class="chart-title">Revenue Growth (FY2027-2031)</div>
-            <div id="revenueChart"></div>
+            <svg viewBox="0 0 600 300" style="width: 100%; height: auto;">
+                <!-- Grid lines -->
+                <line x1="80" y1="40" x2="580" y2="40" stroke="#f3f4f6" stroke-width="1"/>
+                <line x1="80" y1="90" x2="580" y2="90" stroke="#f3f4f6" stroke-width="1"/>
+                <line x1="80" y1="140" x2="580" y2="140" stroke="#f3f4f6" stroke-width="1"/>
+                <line x1="80" y1="190" x2="580" y2="190" stroke="#f3f4f6" stroke-width="1"/>
+                <line x1="80" y1="240" x2="580" y2="240" stroke="#f3f4f6" stroke-width="1"/>
+
+                <!-- Y-axis -->
+                <line x1="80" y1="20" x2="80" y2="240" stroke="#000" stroke-width="2"/>
+                <!-- X-axis -->
+                <line x1="80" y1="240" x2="580" y2="240" stroke="#000" stroke-width="2"/>
+
+                <!-- Y-axis labels -->
+                <text x="65" y="45" font-size="12" fill="#6b7280" text-anchor="end">70B</text>
+                <text x="65" y="95" font-size="12" fill="#6b7280" text-anchor="end">60B</text>
+                <text x="65" y="145" font-size="12" fill="#6b7280" text-anchor="end">50B</text>
+                <text x="65" y="195" font-size="12" fill="#6b7280" text-anchor="end">40B</text>
+                <text x="65" y="245" font-size="12" fill="#6b7280" text-anchor="end">30B</text>
+
+                <!-- Bars -->
+                <!-- 2027: $43.2B -->
+                <rect x="110" y="183" width="70" height="57" fill="#60a5fa" stroke="white" stroke-width="2"/>
+                <text x="145" y="175" font-size="13" font-weight="bold" fill="#000" text-anchor="middle">$43.2B</text>
+
+                <!-- 2028: $47.5B -->
+                <rect x="210" y="169" width="70" height="71" fill="#3b82f6" stroke="white" stroke-width="2"/>
+                <text x="245" y="161" font-size="13" font-weight="bold" fill="#000" text-anchor="middle">$47.5B</text>
+
+                <!-- 2029: $52.1B -->
+                <rect x="310" y="153" width="70" height="87" fill="#2563eb" stroke="white" stroke-width="2"/>
+                <text x="345" y="145" font-size="13" font-weight="bold" fill="#000" text-anchor="middle">$52.1B</text>
+
+                <!-- 2030: $57.2B -->
+                <rect x="410" y="136" width="70" height="104" fill="#1d4ed8" stroke="white" stroke-width="2"/>
+                <text x="445" y="128" font-size="13" font-weight="bold" fill="#000" text-anchor="middle">$57.2B</text>
+
+                <!-- 2031: $64.2B -->
+                <rect x="510" y="112" width="70" height="128" fill="#1e40af" stroke="white" stroke-width="2"/>
+                <text x="545" y="104" font-size="13" font-weight="bold" fill="#000" text-anchor="middle">$64.2B</text>
+
+                <!-- X-axis labels -->
+                <text x="145" y="260" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">2027</text>
+                <text x="245" y="260" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">2028</text>
+                <text x="345" y="260" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">2029</text>
+                <text x="445" y="260" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">2030</text>
+                <text x="545" y="260" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">2031</text>
+
+                <!-- Axis titles -->
+                <text x="330" y="285" font-size="13" fill="#000" text-anchor="middle" font-weight="bold">Fiscal Year</text>
+                <text x="30" y="140" font-size="13" fill="#000" text-anchor="middle" font-weight="bold" transform="rotate(-90 30 140)">Revenue ($ Billions)</text>
+            </svg>
         </div>
 
         <div class="chart-box">
             <div class="chart-title">Net Profit Margin (%)</div>
-            <div id="marginChart"></div>
+            <svg viewBox="0 0 600 300" style="width: 100%; height: auto;">
+                <!-- Grid lines -->
+                <line x1="80" y1="40" x2="580" y2="40" stroke="#f3f4f6" stroke-width="1"/>
+                <line x1="80" y1="90" x2="580" y2="90" stroke="#f3f4f6" stroke-width="1"/>
+                <line x1="80" y1="140" x2="580" y2="140" stroke="#f3f4f6" stroke-width="1"/>
+                <line x1="80" y1="190" x2="580" y2="190" stroke="#f3f4f6" stroke-width="1"/>
+                <line x1="80" y1="240" x2="580" y2="240" stroke="#f3f4f6" stroke-width="1"/>
+
+                <!-- Y-axis -->
+                <line x1="80" y1="20" x2="80" y2="240" stroke="#000" stroke-width="2"/>
+                <!-- X-axis -->
+                <line x1="80" y1="240" x2="580" y2="240" stroke="#000" stroke-width="2"/>
+
+                <!-- Y-axis labels -->
+                <text x="65" y="45" font-size="12" fill="#6b7280" text-anchor="end">20%</text>
+                <text x="65" y="95" font-size="12" fill="#6b7280" text-anchor="end">18%</text>
+                <text x="65" y="145" font-size="12" fill="#6b7280" text-anchor="end">16%</text>
+                <text x="65" y="195" font-size="12" fill="#6b7280" text-anchor="end">14%</text>
+                <text x="65" y="245" font-size="12" fill="#6b7280" text-anchor="end">12%</text>
+
+                <!-- Line path: 14.2%, 15.1%, 15.8%, 16.5%, 17.2% -->
+                <polyline points="145,203 245,185 345,172 445,157 545,143" fill="none" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+                <!-- Data points -->
+                <circle cx="145" cy="203" r="6" fill="#8b5cf6" stroke="white" stroke-width="2"/>
+                <circle cx="245" cy="185" r="6" fill="#8b5cf6" stroke="white" stroke-width="2"/>
+                <circle cx="345" cy="172" r="6" fill="#8b5cf6" stroke="white" stroke-width="2"/>
+                <circle cx="445" cy="157" r="6" fill="#8b5cf6" stroke="white" stroke-width="2"/>
+                <circle cx="545" cy="143" r="6" fill="#8b5cf6" stroke="white" stroke-width="2"/>
+
+                <!-- Value labels -->
+                <text x="145" y="195" font-size="12" font-weight="bold" fill="#000" text-anchor="middle">14.2%</text>
+                <text x="245" y="177" font-size="12" font-weight="bold" fill="#000" text-anchor="middle">15.1%</text>
+                <text x="345" y="164" font-size="12" font-weight="bold" fill="#000" text-anchor="middle">15.8%</text>
+                <text x="445" y="149" font-size="12" font-weight="bold" fill="#000" text-anchor="middle">16.5%</text>
+                <text x="545" y="135" font-size="12" font-weight="bold" fill="#000" text-anchor="middle">17.2%</text>
+
+                <!-- X-axis labels -->
+                <text x="145" y="260" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">2027</text>
+                <text x="245" y="260" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">2028</text>
+                <text x="345" y="260" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">2029</text>
+                <text x="445" y="260" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">2030</text>
+                <text x="545" y="260" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">2031</text>
+
+                <!-- Axis titles -->
+                <text x="330" y="285" font-size="13" fill="#000" text-anchor="middle" font-weight="bold">Fiscal Year</text>
+                <text x="30" y="140" font-size="13" fill="#000" text-anchor="middle" font-weight="bold" transform="rotate(-90 30 140)">Net Profit Margin (%)</text>
+            </svg>
         </div>
     </div>
 
@@ -167,103 +264,5 @@
         <strong>Portfolio Project:</strong> 3-Statement Financial Model • DCF Valuation • SaaS Template<br>
         Full Excel model available on request | Built with Python (Pandas, Plotly, Streamlit)
     </footer>
-
-    <script>
-        // Revenue Growth Chart
-        var revenueData = [{
-            x: [2027, 2028, 2029, 2030, 2031],
-            y: [43.2, 47.5, 52.1, 57.2, 64.2],
-            type: 'bar',
-            text: ['$43.2B', '$47.5B', '$52.1B', '$57.2B', '$64.2B'],
-            textposition: 'outside',
-            textfont: {
-                size: 12,
-                weight: 'bold',
-                color: '#000000'
-            },
-            marker: {
-                color: ['#60a5fa', '#3b82f6', '#2563eb', '#1d4ed8', '#1e40af'],
-                line: {
-                    color: 'white',
-                    width: 1.5
-                }
-            },
-            hovertemplate: '<b>FY%{x}</b><br>Revenue: $%{y}B<extra></extra>'
-        }];
-
-        var revenueLayout = {
-            height: 300,
-            margin: {l: 50, r: 20, t: 10, b: 40},
-            plot_bgcolor: 'white',
-            paper_bgcolor: 'white',
-            xaxis: {
-                title: 'Fiscal Year',
-                showgrid: false,
-                tickfont: {size: 11, color: '#000000'},
-                titlefont: {color: '#000000'}
-            },
-            yaxis: {
-                title: 'Revenue ($ Billions)',
-                showgrid: true,
-                gridcolor: '#f3f4f6',
-                tickfont: {size: 11, color: '#000000'},
-                titlefont: {color: '#000000'}
-            },
-            font: {family: 'Arial', size: 11, color: '#000000'}
-        };
-
-        Plotly.newPlot('revenueChart', revenueData, revenueLayout, {responsive: true, displayModeBar: false});
-
-        // Net Profit Margin Chart
-        var marginData = [{
-            x: [2027, 2028, 2029, 2030, 2031],
-            y: [14.2, 15.1, 15.8, 16.5, 17.2],
-            mode: 'lines+markers+text',
-            line: {
-                color: '#8b5cf6',
-                width: 3
-            },
-            marker: {
-                size: 12,
-                color: '#8b5cf6',
-                line: {
-                    color: 'white',
-                    width: 2
-                }
-            },
-            text: ['14.2%', '15.1%', '15.8%', '16.5%', '17.2%'],
-            textposition: 'top center',
-            textfont: {
-                size: 12,
-                weight: 'bold',
-                color: '#000000'
-            },
-            hovertemplate: '<b>FY%{x}</b><br>Net Margin: %{y}%<extra></extra>'
-        }];
-
-        var marginLayout = {
-            height: 300,
-            margin: {l: 50, r: 20, t: 30, b: 40},
-            plot_bgcolor: 'white',
-            paper_bgcolor: 'white',
-            xaxis: {
-                title: 'Fiscal Year',
-                showgrid: false,
-                tickfont: {size: 11, color: '#000000'},
-                titlefont: {color: '#000000'}
-            },
-            yaxis: {
-                title: 'Net Profit Margin (%)',
-                showgrid: true,
-                gridcolor: '#f3f4f6',
-                tickfont: {size: 11, color: '#000000'},
-                titlefont: {color: '#000000'},
-                range: [0, 22]
-            },
-            font: {family: 'Arial', size: 11, color: '#000000'}
-        };
-
-        Plotly.newPlot('marginChart', marginData, marginLayout, {responsive: true, displayModeBar: false});
-    </script>
 </body>
 </html>
