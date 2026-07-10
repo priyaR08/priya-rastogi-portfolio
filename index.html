@@ -346,7 +346,6 @@
 
 <section id="home">
   <div class="wrap">
-    <div class="boot" id="boot"></div>
     <h1 class="name">Priya Rastogi</h1>
     <p class="hero-sub">I read a business the way an analyst reads a balance sheet: line by line, until the story underneath the numbers is undeniable. Five years in commercial credit, now building models and scenarios for FP&amp;A teams.</p>
 
@@ -622,30 +621,6 @@
 <script>
 (function(){
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* boot sequence */
-  var bootEl = document.getElementById('boot');
-  var lines = [
-    '> initializing profile..._'
-  ];
-  if(reduced){
-    bootEl.textContent = lines[lines.length-1];
-  } else {
-    var li = 0, ci = 0;
-    function typeLine(){
-      if(li >= lines.length) return;
-      var current = lines[li];
-      if(ci <= current.length){
-        bootEl.innerHTML = current.slice(0,ci) + '<span class="caret"></span>';
-        ci++;
-        setTimeout(typeLine, 26);
-      } else {
-        li++; ci = 0;
-        setTimeout(typeLine, li === lines.length ? 0 : 380);
-      }
-    }
-    typeLine();
-  }
 
   /* hero chart draw */
   var path = document.getElementById('chart-path');
