@@ -234,15 +234,22 @@
       <div class="sub" id="upsideVal">+66.1% implied upside</div>
     </div>
     <div class="dcf-card">
-      <div class="label">Comps — EV/Revenue</div>
-      <div class="value" id="evRevValue">$370.71</div>
-      <div class="sub method">peer median multiple</div>
+      <div class="label">R&D Budget (FY2030)</div>
+      <div class="value" id="rdBudgetValue">$8.4B</div>
+      <div class="sub method">14.2% of revenue</div>
     </div>
     <div class="dcf-card">
-      <div class="label">Comps — EV/FCF</div>
-      <div class="value" id="evFcfValue">$269.77</div>
-      <div class="sub method">peer median multiple</div>
+      <div class="label">Sales & Marketing (FY2030)</div>
+      <div class="value" id="smBudgetValue">$20.1B</div>
+      <div class="sub method">33.9% of revenue</div>
     </div>
+  </div>
+
+  <div class="section-label" style="margin-top:40px;">04 — G&A Budget Planning</div>
+  <div class="dcf-card" style="max-width:400px;">
+    <div class="label">General & Administrative (FY2030)</div>
+    <div class="value" id="gaBudgetValue">$4.2B</div>
+    <div class="sub method">7.1% of revenue → departmental spend target</div>
   </div>
 
   <footer>
@@ -422,9 +429,16 @@ const DATA = {
     "current_price": 165.70,
     "intrinsic_value": 275.20,
     "wacc": 9.24,
-    "upside_pct": 66.1,
-    "ev_revenue_price": 370.71,
-    "ev_fcf_price": 269.77
+    "upside_pct": 66.1
+  },
+  "budget_allocation": {
+    "fy2030_revenue": 59.3,
+    "rd_budget": 8.4,
+    "rd_pct": 14.2,
+    "sm_budget": 20.1,
+    "sm_pct": 33.9,
+    "ga_budget": 4.2,
+    "ga_pct": 7.1
   }
 };
 
@@ -530,8 +544,11 @@ document.querySelectorAll('.scenario-btn').forEach(btn=>{
 document.getElementById('currentPrice').textContent = '$'+DATA.dcf_summary.current_price.toFixed(2);
 document.getElementById('intrinsicValue').textContent = '$'+DATA.dcf_summary.intrinsic_value.toFixed(2);
 document.getElementById('upsideVal').textContent = (DATA.dcf_summary.upside_pct>0?'+':'')+DATA.dcf_summary.upside_pct.toFixed(1)+'% implied upside';
-document.getElementById('evRevValue').textContent = '$'+DATA.dcf_summary.ev_revenue_price.toFixed(2);
-document.getElementById('evFcfValue').textContent = '$'+DATA.dcf_summary.ev_fcf_price.toFixed(2);
+
+// Budget allocation cards (FY2030 departmental spend targets)
+document.getElementById('rdBudgetValue').textContent = '$'+DATA.budget_allocation.rd_budget.toFixed(1)+'B';
+document.getElementById('smBudgetValue').textContent = '$'+DATA.budget_allocation.sm_budget.toFixed(1)+'B';
+document.getElementById('gaBudgetValue').textContent = '$'+DATA.budget_allocation.ga_budget.toFixed(1)+'B';
 
 buildChart('base');
 buildTicker('base');
